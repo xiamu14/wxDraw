@@ -246,6 +246,7 @@ Store.prototype = {
         this.store.splice(index, 0, obj);
     },
     clear: function clear() {
+        console.log('这里执行了吗？');
         this.store = [];
     }
 };
@@ -4406,9 +4407,10 @@ WxDraw.prototype = {
         this.bus.dispatch('clearAnimation', 'no', 'no');
     },
     reset: function reset() {
-        this.canvas.clearRect(this.x, this.y, this.w, this.h);
-        this.canvas.draw();
-        this.clear();
+        this.store.clear();
+        // this.bus.dispatch('clearAnimation', 'no', 'no');    
+        // this.canvas.clearRect(this.x, this.y, this.w, this.h);
+        // this.canvas.draw();
     }
 };
 

@@ -248,9 +248,10 @@ WxDraw.prototype = {
        this.bus.dispatch('clearAnimation','no','no');
     },
     reset: function() {
-        this.canvas.clearRect(this.x, this.y, this.w, this.h);
-        this.canvas.draw();
-        this.clear();
+        this.store.clear();
+        // this.bus.dispatch('clearAnimation', 'no', 'no');    
+        // this.canvas.clearRect(this.x, this.y, this.w, this.h);
+        // this.canvas.draw();
     }
 }
 
