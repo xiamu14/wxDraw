@@ -49,7 +49,7 @@ Store.prototype = {
          
     },
     clear(){
-        console.log('这里执行了吗？');
+        // console.log('这里执行了吗？');
        this.store = [];
     }
 

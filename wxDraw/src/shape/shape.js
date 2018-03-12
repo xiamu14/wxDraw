@@ -209,7 +209,7 @@ Shape.prototype = {
             // console.log('未添加动画对象');
         }
         
-        console.log("start")
+        // console.log("start")
 
     },//开始动画
     updateOption: function (option) {

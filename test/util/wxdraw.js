@@ -246,7 +246,7 @@ Store.prototype = {
         this.store.splice(index, 0, obj);
     },
     clear: function clear() {
-        console.log('这里执行了吗？');
+        // console.log('这里执行了吗？');
         this.store = [];
     }
 };
@@ -3689,7 +3689,7 @@ AniFragWrap.prototype = {
     },
     getAniOver: function getAniOver(who) {
         this.overAni.push(who);
-        console.log('连续碎片是否完成?', this.overAni);
+        // console.log('连续碎片是否完成?', this.overAni);
         if (this.overAni.length == this.fragStore.length) {
             // 动画执行完毕后 还有几种情况 1 直接结束
             if (this.loop) {
@@ -3888,11 +3888,11 @@ Shape.prototype = {
             this.bus.dispatch('addAnimation', "no", this.aniFragWraper, this.Shapeid);
             this.aniFragListId = ""; // 每一段动画的id
             this.aniFragWraper = null; // 每一段动画的id
-        } else {
-                // console.log('未添加动画对象');
-            }
+        } else {}
+            // console.log('未添加动画对象');
 
-        console.log("start");
+
+            // console.log("start")
     }, //开始动画
     updateOption: function updateOption(option) {
         if (!this.Shape.bus) {
@@ -4160,8 +4160,8 @@ Animation.prototype = {
         }
 
         // //console.log('shaId', this.wraperAniCompleteOb[shaId].length, this.animationFragStore[shaId].length,this.wraperAniCompleteOb[shaId].length == this.animationFragStore[shaId].length);
-        console.log('========测试判断是否动画结束是否成功=========');
-        console.log(this.wraperAniCompleteOb[shaId].length, this.animationFragStore[shaId].length);
+        // console.log('========测试判断是否动画结束是否成功=========');
+        // console.log(this.wraperAniCompleteOb[shaId].length, this.animationFragStore[shaId].length);
         if (this.wraperAniCompleteOb[shaId].length == this.wraperAniCompleteOb.length) {
             obj.restoreDrag(); //恢复drag状态
             this.bus.dispatch('animationComplete', 'no', shaId); // 某一个物件的动画完成
@@ -4330,15 +4330,15 @@ WxDraw.prototype = {
         // //console.log(AnimationOption);
         // this.animation.animationFragStore.push(AnimationOption);// 添加 动画碎片 
         // this.animation.animationFragStore2.push(AnimationOption);// 添加 动画碎片 
-        console.log('看下为什么了？？', this.animation.animationFragStore);
-        console.log('看下animationWrapper', AnimationWraper);
+        // console.log('看下为什么了？？', this.animation.animationFragStore);
+        // console.log('看下animationWrapper', AnimationWraper);
         if (this.animation.animationFragStore[Shapeid]) {
             // 
-            console.log('已经有动画了');
+            // console.log('已经有动画了');
             this.animation.animationFragStore[Shapeid][this.animation.animationFragStore[Shapeid].length - 1].endCallWraper = AnimationWraper;
             this.animation.animationFragStore[Shapeid].push(AnimationWraper);
         } else {
-            console.log('初始化 ');
+            // console.log('初始化 ');
 
             this.animation.animationFragStore[Shapeid] = [AnimationWraper];
         }

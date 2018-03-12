@@ -96,8 +96,8 @@ Animation.prototype = {
         }
 
         // //console.log('shaId', this.wraperAniCompleteOb[shaId].length, this.animationFragStore[shaId].length,this.wraperAniCompleteOb[shaId].length == this.animationFragStore[shaId].length);
-        console.log('========测试判断是否动画结束是否成功=========');
-        console.log(this.wraperAniCompleteOb[shaId].length, this.animationFragStore[shaId].length);
+        // console.log('========测试判断是否动画结束是否成功=========');
+        // console.log(this.wraperAniCompleteOb[shaId].length, this.animationFragStore[shaId].length);
         if (this.wraperAniCompleteOb[shaId].length == this.wraperAniCompleteOb.length) {
             obj.restoreDrag();//恢复drag状态
             this.bus.dispatch('animationComplete', 'no', shaId);// 某一个物件的动画完成
