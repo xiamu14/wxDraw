@@ -4145,14 +4145,14 @@ Animation.prototype = {
         // console.log(this.animationFragStore[who]);
         delete this.animationFragStore[who];
         // delete this.wraperAniCompleteOb[who];
-        console.log("=========结束动画=========");
+        // console.log("=========结束动画=========")
         if (Object.keys(this.wraperAniCompleteOb).length === Object.keys(this.animationFragStore).length) {
             this.running = false; // 动画执行 结束
             // //console.log('结束动画')
         }
     },
     wraperAniComplete: function wraperAniComplete(afID, shaId, obj) {
-        console.log(afID, shaId);
+        // console.log(afID, shaId);
         if (this.wraperAniCompleteOb[shaId]) {
             this.wraperAniCompleteOb[shaId].push(afID);
         } else {
